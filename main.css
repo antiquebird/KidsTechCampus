@@ -36,7 +36,7 @@
 
 }
 body{
-  background-image: url(../images/b004.gif);
+  background-image: url(b004.gif);
   background-size: cover; /* 背景画像を全体に表示 */
   background-position: top; /* 背景画像を中央に配置 */
 }
@@ -153,7 +153,7 @@ main {
 
 #hero {
   position: relative; /* 相対位置を指定 */
-  background-image: url(../images/01.webp);
+  background-image: url(01.webp);
   background-size: cover; /* 背景画像を全体に表示 */
   background-position: center; /* 背景画像を中央に配置 */
   height: 540px;
