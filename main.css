@@ -1,14 +1,19 @@
 /* main.css */
-/* カスケーディング下に書いた項目の方が優先される*/
-.pop {font-family: "Poppins", sans-serif;}
-.Noto{font-family: "Noto Sans JP", sans-serif;}
+.pop {
+  font-family: "Poppins", sans-serif;
+}
+
+.Noto {
+  font-family: "Noto Sans JP", sans-serif;
+}
 
 .container {
-	width: 75%;
-  max-width: 1120px;/* 最大サイズ */
-	margin: 0 auto;
-	overflow: hidden;
+  width: 75%;
+  max-width: 1120px;
+  margin: 0 auto;
+  overflow: hidden;
 }
+
 .container-style2 {
   width: 75%;
   max-width: 1120px;
@@ -19,39 +24,46 @@
   justify-content: center;
 }
 
+.container-style4 {
+  width: 48%;
+  max-width: 1120px;
+  margin: 30;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
 .flex {
   display: flex;
-  justify-content: space-between; 
-  flex-wrap: wrap; /* レスポンシブ対応で折り返し可能に */
-  align-items: flex-start; /* 上端に揃える */
-}
-
-
-.flex2{
-  display: flex;
-  justify-content: space-between; 
-  /* flex　水平方向のみ中央*/
-  align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
 
+.flex2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-body{
+
+body {
   background-image: url(b004.gif);
-  background-size: cover; /* 背景画像を全体に表示 */
-  background-position: top; /* 背景画像を中央に配置 */
+  background-size: cover;
+  background-position: top;
 }
+
 header {
   display: flex;
   align-items: center;
-  position: fixed; /* スクロールしても上部に固定 */
-  top: 0; /* 上端に配置 */
+  position: fixed;
+  top: 0;
   left: 0;
-  width: 100%; /* 横幅を全体に広げる */
-  background-color: #eceeee; /* 背景色 */
-  z-index: 100; /* 他の要素の上に表示されるようにする重なり順なので数字を大きくしている */
-  border-bottom: 0px solid #000000; /* 下線を追加 */
-  height: 50px; /* ヘッダーの高さを指定 */
-  box-shadow: 0 12px 12px rgba(0, 0, 0, 0.3); /* 影を追加 */
+  width: 100%;
+  background-color: #eceeee;
+  z-index: 100;
+  height: 50px;
+  box-shadow: 0 12px 12px rgba(0, 0, 0, 0.3);
 }
 
 .logo {
@@ -59,103 +71,138 @@ header {
   font-weight: 700;
   color: #000000;
   letter-spacing: -0.04em;
-
-  margin-top: 10;
-  margin-bottom: 0px;
-  padding-bottom: px; /* 下に余白 */
-  text-decoration: none;
+  margin: 0;
 }
 
-/* 通常のメニュー表示 */
 .header_menu {
-	display: flex;
-	flex-direction: row;
-	list-style: none;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
 }
-/* ハンバーガーメニューアイコン */
+
 .menu-icon {
-	display: none;
-	flex-direction: column;
-	cursor: pointer;
-	width: 25px;
-	height: 25px;
-	justify-content: space-between;
-	margin-left: auto; /* 右端に配置 */
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  justify-content: space-between;
+  margin-left: auto;
 }
+
 .menu-icon span {
-	display: block;
-	width: 100%;
-	height: 4px;
-	background-color: #333;
-	border-radius: 2px;
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #333;
+  border-radius: 2px;
 }
-/* チェックボックス非表示 */
+
 .menu-toggle {
-	display: none;
+  display: none;
 }
-/* 画面サイズが768px以下のとき */
+
 @media (max-width: 768px) {
-	/* メニューリストを非表示 */
-	.header_menu {
-		display: none;
-		flex-direction: column;
-		width: 100%;
-		background-color: #fff;
-		text-align: center;
-		position: absolute;
-		top: 50px;
-		right: 0;
-		z-index: 100;
-	}
-	/* ハンバーガーメニューアイコンを表示 */
-	.menu-icon {
-		display: flex;
-	}
-	/* トグルボタンがオンのときにメニューを表示 */
-	.menu-toggle:checked ~ nav .header_menu {
-		display: flex;
-	}
-	.header_menu li {
-		padding: 10px 0;
-	}
-	.header_menu a {
-		color: #000;
-		text-decoration: none;
-		font-size: 18px;
-	}
+  .header_menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    text-align: center;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    z-index: 100;
+  }
+  
+  .menu-icon {
+    display: flex;
+  }
+  
+  .menu-toggle:checked ~ nav .header_menu {
+    display: flex;
+  }
+  
+  .header_menu li {
+    padding: 10px 0;
+  }
+  
+  .header_menu a {
+    color: #000;
+    text-decoration: none;
+    font-size: 18px;
+  }
 }
-/* 768px以上のとき */
+
 @media (min-width: 769px) {
-	.menu-icon {
-		display: none; /* ハンバーガーメニュー非表示 */
-	}
+  .menu-icon {
+    display: none;
+  }
 }
 
 .header_menu li {
-  margin-right: 20px; /* 項目の間に余白 */
+  margin-right: 20px;
 }
 
 .header_menu a {
-  color: #000000; 
-  text-decoration: none; /* リンクの下線を消す */
-  font-weight: 400; /* 太字にする */
+  color: #000000;
+  text-decoration: none;
+  font-weight: 400;
 }
 
 .header_menu a:hover {
-  color: #3b9df3; /* 触れたときの色 */
-  font-weight: 400; /* 太字にする */
-  transition:.3s;
+  color: #3b9df3;
+  font-weight: 400;
+  transition: 0.3s;
 }
-/* メイン */
+
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 40px 0;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-text {
+  font-size: 14px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.social-icon img {
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+  transition: transform 0.3s;
+}
+
+.social-icon img:hover {
+  transform: scale(1.1);
+}
+
+.social-icon {
+  color: white;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  opacity: 0.8;
+}
+
 main {
-  margin-top: 55px; /* ヘッダーの高さ分だけ余白を追加 */
+  margin-top: 55px;
 }
 
 #hero {
-  position: relative; /* 相対位置を指定 */
+  position: relative;
   background-image: url(01.webp);
-  background-size: cover; /* 背景画像を全体に表示 */
-  background-position: center; /* 背景画像を中央に配置 */
+  background-size: cover;
+  background-position: center;
   height: 540px;
   border-radius: 30px;
   display: flex;
@@ -167,142 +214,161 @@ main {
   content: '';
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4); /* 半透明の黒 */
+  background: rgba(0, 0, 0, 0.4);
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1; /* 画像の上に表示 */
+  z-index: 1;
 }
 
 .hero_inner {
-  position: relative; /* 内部コンテンツを相対位置に設定 */
-  z-index: 2; /* オーバーレイの上に表示 */
+  position: relative;
+  z-index: 2;
   color: #ffffff;
   width: 100%;
   text-align: center;
-  display: flex; /* フレックスボックスを使用 */
-  flex-direction: column; /* 縦に配置 */
-  align-items: center; /* 中央揃え（左右のみ） */
-  justify-content: flex-start; /* 上部に揃える */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
-
-
 
 .hero_inner h1 {
   font-size: 38px;
   font-weight: 700;
-  margin-bottom: 0; /* マージンを0に設定 */
+  margin-bottom: 0;
 }
 
 .hero_inner p {
   font-size: 14px;
   font-weight: 500;
-  margin-top: 10px; /* 上の余白を調整（必要に応じて変更） */
-  margin-bottom: 0; /* マージンを0に設定 */
+  margin: 10px 0 0 0;
 }
 
-/* 画像のスタイルを調整 */
 .column-2 {
-  width: 48%; /* 画像とテキストの幅を調整 */
+  width: 48%;
   display: flex;
-  flex-direction: column; /* 縦に並べる */
-  justify-content: flex-start; /* 上揃え */
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
-
-/* コンセプト */
 .concept-img {
-  width: 48%; /* 幅を100%に設定 */
-  height: auto; /* 高さは自動で調整 */
+  width: 48%;
+  height: auto;
   display: flex;
-  justify-content: center; /* 中央に揃える */
-  align-items: center; /* 中央に揃える */
+  justify-content: center;
+  align-items: center;
 }
 
 .concept-img img {
-  width: 100%; /* 幅を100%に設定 */
-  height: auto; /* 高さは自動で調整 */
-  object-fit: cover; /* アスペクト比を保持しつつ全体表示 */
-  border-radius: 30px; /* 角を丸める */
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 30px;
 }
 
-.title{
+.title {
   font-size: 36px;
   font-weight: 700;
   color: #348fde;
   margin-bottom: 10px;
 }
 
+.button1 {
+  display: inline-block;
+  padding: 10px 10px;
+  background-color: #de5917;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 0;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  margin: 0 auto;
+}
 
-.column-3{
+.button1:hover {
+  background-color: #ffba18;
+}
+
+.button1 a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.column-3 {
   width: 48%;
 }
 
-.column-4{
+.column-4 {
   width: 48%;
 }
-.column-5{
+
+.column-5 {
   width: 100%;
   display: flex;
-  flex-direction: column; /* yokoに並べる */
-  justify-content: flex-start; /* 上揃え */
+  flex-direction: column;
+  justify-content: flex-start;
 }
-.text{
+
+.text {
   line-height: 2;
 }
 
 .form-container {
   display: flex;
   flex-direction: column;
-  align-items: center; /* フォームを中央に配置 */
-  margin-top: 20px; /* フォームの上に余白を追加 */
+  align-items: center;
+  margin-top: 20px;
 }
 
 .form {
   background-color: #fff;
-  width: 100%; /* 幅を100%に設定 */
-  max-width: 640px; /* 最大幅を640pxに制限 */
-  height: 600px; /* 高さを自動調整 */
-  border: none; /* フレームの境界線を削除 */
-  margin: 20px 0; /* 上下に余白を追加 */
+  width: 100%;
+  max-width: 640px;
+  height: 600px;
+  border: none;
+  margin: 20px 0;
 }
+
 .kyousitu-img {
-  width: 48%; /* 幅を100%に設定 */
-  height: auto; /* 高さは自動で調整 */
+  width: 48%;
+  height: auto;
   display: flex;
-  justify-content: center; /* 中央に揃える */
-  align-items: center; /* 中央に揃える */
+  justify-content: center;
+  align-items: center;
 }
 
 .kyousitu-img img {
-  width: 100%; /* 幅を100%に設定 */
-  height: auto; /* 高さは自動で調整 */
-  object-fit: cover; /* アスペクト比を保持しつつ全体表示 */
-
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .demae-img {
-  width: 48%; /* 幅を100%に設定 */
-  height: 100%; /* 高さは自動で調整 */
+  width: 48%;
+  height: 100%;
   display: flex;
-  justify-content: center; /* 中央に揃える */
-  align-items: center; /* 中央に揃える */
+  justify-content: center;
+  align-items: center;
 }
 
 .demae-img img {
-  width: 100%; /* 幅を100%に設定 */
-  height: 100%; /* 高さは自動で調整 */
-  object-fit: cover; /* アスペクト比を保持しつつ全体表示 */
-  border-radius: 30px; /* 角を丸める */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30px;
 }
 
-/* 教室案内 */
-.column-course{
+.column-course {
   width: 100%;
 }
-.mini-title{
+
+.mini-title {
   color: #348fde;
-  margin:0px;
+  margin: 0;
   font-size: 20px;
   display: flex;
   align-items: center;
@@ -310,18 +376,18 @@ main {
 }
 
 .ryokin-img {
-  width: 80%; /* 幅を100%に設定 */
-  height: 100%; /* 高さは自動で調整 */
+  width: 80%;
+  height: 100%;
   display: flex;
-  justify-content: center; /* 中央に揃える */
-  align-items: center; /* 中央に揃える */
+  justify-content: center;
+  align-items: center;
 }
 
 .ryokin-img img {
-  width: 80%; /* 幅を100%に設定 */
-  height: 100%; /* 高さは自動で調整 */
-  object-fit: cover; /* アスペクト比を保持しつつ全体表示 */
-  border-radius: 30px; /* 角を丸める */
+  width: 80%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30px;
 }
 
 .container-style3 {
@@ -331,11 +397,12 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start; /* 変更: 上揃えに */
+  justify-content: flex-start;
 }
 
 .column-demae {
   display: flex;
-  flex-direction: column; /* 縦に並べる */
-  align-items: center; /* 中央揃え */
+  flex-direction: column;
+  align-items: center;
 }
+
