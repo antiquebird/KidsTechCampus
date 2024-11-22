@@ -268,3 +268,57 @@ main {
         height: auto; /* 高さは自動調整 */
     }
 }
+
+/* 基本スタイル (PC向け) */
+.container {
+    display: block;
+    text-align: left; /* 初期状態は左寄せ */
+}
+
+img {
+    width: auto;
+    height: auto;
+}
+
+/* メイン画像のサイズ調整 (PC向け) */
+.concept-img img, .kyousitu-img img, .demae-img img {
+    width: auto;  /* 画像の元のサイズ */
+    max-width: 100%;  /* 画面を超えないようにする */
+}
+
+/* スマホ向けのスタイル */
+@media (max-width: 768px) {
+    /* コンテナを中央揃え */
+    .container {
+        display: flex;
+        justify-content: center; /* 水平方向に中央揃え */
+        align-items: center;     /* 垂直方向に中央揃え */
+        flex-direction: column;  /* 縦並び */
+        text-align: center;      /* テキストも中央揃え */
+    }
+
+    /* 画像のサイズを調整 */
+    .concept-img img, .kyousitu-img img, .demae-img img {
+        width: 90%; /* 画像の幅を90%に調整 */
+        height: auto;  /* アスペクト比を保つ */
+    }
+
+    /* 各セクション内の要素が中央揃え */
+    .flex {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* ボタンの中央揃え */
+    .button1 {
+        display: flex;
+        justify-content: center;
+    }
+
+    /* フッター内のアイコンを中央揃え */
+    .footer .social-icon {
+        display: inline-block;
+        margin: 0 10px;
+    }
+}
