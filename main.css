@@ -541,3 +541,22 @@ main {
     display: flex; /* 画像を表示 */
   }
 }
+
+/* 画像をレスポンシブに表示するスタイル */
+.responsive-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* 親コンテナの調整 */
+.column-5 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* テキストと画像間のスペースを調整 */
+.ryokin-img {
+  margin-bottom: 15px;
+}
