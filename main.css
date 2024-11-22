@@ -550,57 +550,34 @@ main {
   margin: 0 auto;
 }
 
-/* 親コンテナの調整 */
 .column-5 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-/* テキストと画像間のスペースを調整 */
-.ryokin-img {
-  margin-bottom: 15px;
-}
-
-
-.ryo-setumei {
-  list-style-position: inside; /* 点とテキストを左揃えに */
-  margin: 0; /* 点と文章の間の余白を削除 */
-  padding: 0;
-}
-
-.ryo-setumei li {
-  margin: 0; /* 不要な余白を削除 */
-}
-
-.ryokin-img img {
-  display: block;
-  margin: 0 auto; /* 画像を中央揃え */
-}
-.ryokin-img {
-  width: 80%; /* 画像と文章の幅を合わせる */
-  margin: 0 auto; /* 親要素で中央揃え */
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column; /* 画像とテキストを縦並びに */
+  align-items: center; /* 中央揃え */
+  width: 80%; /* 親要素の幅を設定 */
+  margin: 0 auto; /* 親要素全体を中央揃え */
+}
+
+.ryokin-img {
+  width: 100%; /* 親要素に合わせて幅を設定 */
+  margin-bottom: 20px; /* 画像とテキストの間に余白を追加 */
 }
 
 .ryokin-img img {
-  width: 100%; /* 画像を親要素に合わせる */
-  height: auto; /* 高さは自動調整 */
-  object-fit: cover;
-  border-radius: 30px;
-  display: block;
-  margin: 0 auto; /* 画像を中央揃え */
+  width: 100%; /* 画像を親要素にフィット */
+  height: auto; /* 縦横比を維持 */
+  border-radius: 10px; /* 角を丸める */
+  display: block; /* ブロック要素にする */
 }
 
 .ryo-setumei {
-  width: 80%; /* 画像と文章の幅を合わせる */
-  margin: 0 auto; /* 親要素で中央揃え */
-  list-style-position: inside; /* 点とテキストを左揃えに */
-  padding: 0;
+  width: 100%; /* 親要素の幅に合わせる */
+  list-style-position: inside; /* テキストをリストマークの内側に */
+  margin: 0; /* 余白を削除 */
+  padding: 0; /* パディングを削除 */
+  text-align: left; /* テキストを左揃え */
 }
 
 .ryo-setumei li {
-  margin: 0; /* 不要な余白を削除 */
+  margin-bottom: 10px; /* 各リスト項目の間に余白を追加 */
 }
-
