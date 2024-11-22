@@ -560,3 +560,10 @@ main {
 .ryokin-img {
   margin-bottom: 15px;
 }
+
+@media (max-width: 768px) {
+    .ryokin-img img {
+        display: block; /* ブロック要素化で中央揃え可能 */
+        margin: 0 auto; /* 左右中央揃え */
+    }
+}
