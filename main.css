@@ -576,3 +576,31 @@ main {
   display: block;
   margin: 0 auto; /* 画像を中央揃え */
 }
+.ryokin-img {
+  width: 80%; /* 画像と文章の幅を合わせる */
+  margin: 0 auto; /* 親要素で中央揃え */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ryokin-img img {
+  width: 100%; /* 画像を親要素に合わせる */
+  height: auto; /* 高さは自動調整 */
+  object-fit: cover;
+  border-radius: 30px;
+  display: block;
+  margin: 0 auto; /* 画像を中央揃え */
+}
+
+.ryo-setumei {
+  width: 80%; /* 画像と文章の幅を合わせる */
+  margin: 0 auto; /* 親要素で中央揃え */
+  list-style-position: inside; /* 点とテキストを左揃えに */
+  padding: 0;
+}
+
+.ryo-setumei li {
+  margin: 0; /* 不要な余白を削除 */
+}
+
