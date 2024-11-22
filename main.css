@@ -1,4 +1,4 @@
-　/* main.css */
+/* main.css */
 /* カスケーディング下に書いた項目の方が優先される*/
 .pop {font-family: "Poppins", sans-serif;}
 .Noto{font-family: "Noto Sans JP", sans-serif;}
@@ -9,7 +9,8 @@
 	margin: 0 auto;
 	overflow: hidden;
 }
-.container-style2 {
+
+.container-style2, .container-style3 {
   width: 75%;
   max-width: 1120px;
   margin: 0 auto;
@@ -22,7 +23,7 @@
 .container-style4 {
   width: 48%;
   max-width: 1120px;
-  margin: 30;
+  margin: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,20 +37,18 @@
   align-items: flex-start; /* 上端に揃える */
 }
 
-
 .flex2{
   display: flex;
   justify-content: space-between; 
-  /* flex　水平方向のみ中央*/
   align-items: center;
-  justify-content: space-between;
-
 }
+
 body{
   background-image: url(b004.gif);
   background-size: cover; /* 背景画像を全体に表示 */
   background-position: top; /* 背景画像を中央に配置 */
 }
+
 header {
   display: flex;
   align-items: center;
@@ -71,7 +70,6 @@ header {
   letter-spacing: -0.04em;
   margin-top: 0px;
   margin-bottom: 0px;
-  padding-bottom: px; /* 下に余白 */
   text-decoration: none;
 }
 
@@ -81,7 +79,7 @@ header {
 	flex-direction: row;
 	list-style: none;
 }
-/* ハンバーガーメニューアイコン */
+
 .menu-icon {
 	display: none;
 	flex-direction: column;
@@ -98,13 +96,12 @@ header {
 	background-color: #333;
 	border-radius: 2px;
 }
-/* チェックボックス非表示 */
+
 .menu-toggle {
 	display: none;
 }
-/* 画面サイズが768px以下のとき */
+
 @media (max-width: 768px) {
-	/* メニューリストを非表示 */
 	.header_menu {
 		display: none;
 		flex-direction: column;
@@ -116,24 +113,26 @@ header {
 		right: 0;
 		z-index: 100;
 	}
-	/* ハンバーガーメニューアイコンを表示 */
+
 	.menu-icon {
 		display: flex;
 	}
-	/* トグルボタンがオンのときにメニューを表示 */
+
 	.menu-toggle:checked ~ nav .header_menu {
 		display: flex;
 	}
+
 	.header_menu li {
 		padding: 10px 0;
 	}
+
 	.header_menu a {
 		color: #000;
 		text-decoration: none;
 		font-size: 18px;
 	}
 }
-/* 768px以上のとき */
+
 @media (min-width: 769px) {
 	.menu-icon {
 		display: none; /* ハンバーガーメニュー非表示 */
@@ -141,55 +140,50 @@ header {
 }
 
 .header_menu li {
-  margin-right: 20px; /* 項目の間に余白 */
+  margin-right: 20px;
 }
 
 .header_menu a {
   color: #000000; 
-  text-decoration: none; /* リンクの下線を消す */
-  font-weight: 400; /* 太字にする */
+  text-decoration: none;
+  font-weight: 400;
 }
 
 .header_menu a:hover {
-  color: #3b9df3; /* 触れたときの色 */
-  font-weight: 400; /* 太字にする */
+  color: #3b9df3;
+  font-weight: 400;
   transition:.3s;
 }
-/* フッターのスタイル */
-/* フッターのスタイルを調整 */
+
 .footer {
   width: 100%;
   text-align: center;
-
-  padding: 40px 0; /* 縦幅を大きくする */
+  padding: 40px 0;
   margin-top: 50px;
   display: flex;
   flex-direction: column;
-  align-items: center; /* 水平方向中央揃え */
-  justify-content: center; /* 垂直方向中央揃え */
+  align-items: center;
+  justify-content: center;
 }
 
 .footer-text {
-  font-size: 14px; /* 文字のサイズ */
+  font-size: 14px;
   font-weight: 700;
   color: #000000;
-  margin-bottom: 10px; /* アイコンとの間に余白を追加 */
+  margin-bottom: 10px;
 }
 
-
-/* ソーシャルアイコンのスタイル (Instagramと問い合わせフォーム共通) */
 .social-icon img {
   width: 40px;
   height: 40px;
-  margin: 0 10px; /* アイコン間のスペース */
+  margin: 0 10px;
   transition: transform 0.3s;
 }
 
 .social-icon img:hover {
-  transform: scale(1.1); /* ホバー時に少し大きくなる */
+  transform: scale(1.1);
 }
 
-/* アイコンのリンクスタイル */
 .social-icon {
   color: white;
   text-decoration: none;
@@ -199,17 +193,15 @@ header {
   opacity: 0.8;
 }
 
-
-/* メイン */
 main {
-  margin-top: 55px; /* ヘッダーの高さ分だけ余白を追加 */
+  margin-top: 55px;
 }
 
 #hero {
-  position: relative; /* 相対位置を指定 */
+  position: relative;
   background-image: url(01.webp);
-  background-size: cover; /* 背景画像を全体に表示 */
-  background-position: center; /* 背景画像を中央に配置 */
+  background-size: cover;
+  background-position: center;
   height: 540px;
   border-radius: 30px;
   display: flex;
@@ -221,61 +213,58 @@ main {
   content: '';
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4); /* 半透明の黒 */
+  background: rgba(0, 0, 0, 0.4);
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1; /* 画像の上に表示 */
+  z-index: 1;
 }
 
 .hero_inner {
-  position: relative; /* 内部コンテンツを相対位置に設定 */
-  z-index: 2; /* オーバーレイの上に表示 */
+  position: relative;
+  z-index: 2;
   color: #ffffff;
   width: 100%;
   text-align: center;
-  display: flex; /* フレックスボックスを使用 */
-  flex-direction: column; /* 縦に配置 */
-  align-items: center; /* 中央揃え（左右のみ） */
-  justify-content: flex-start; /* 上部に揃える */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .hero_inner h1 {
   font-size: 38px;
   font-weight: 700;
-  margin-bottom: 0; /* マージンを0に設定 */
+  margin-bottom: 0;
 }
 
 .hero_inner p {
   font-size: 14px;
   font-weight: 500;
-  margin-top: 10px; /* 上の余白を調整（必要に応じて変更） */
-  margin-bottom: 0; /* マージンを0に設定 */
+  margin-top: 10px;
+  margin-bottom: 0;
 }
 
-/* 画像のスタイルを調整 */
 .column-2 {
-  width: 48%; /* 画像とテキストの幅を調整 */
+  width: 48%;
   display: flex;
-  flex-direction: column; /* 縦に並べる */
-  justify-content: flex-start; /* 上揃え */
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
-
-/* コンセプト */
 .concept-img {
-  width: 48%; /* 幅を100%に設定 */
-  height: auto; /* 高さは自動で調整 */
+  width: 48%;
+  height: auto;
   display: flex;
-  justify-content: center; /* 中央に揃える */
-  align-items: center; /* 中央に揃える */
+  justify-content: center;
+  align-items: center;
 }
 
 .concept-img img {
-  width: 100%; /* 幅を100%に設定 */
-  height: auto; /* 高さは自動で調整 */
-  object-fit: cover; /* アスペクト比を保持しつつ全体表示 */
-  border-radius: 30px; /* 角を丸める */
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 30px;
 }
 
 .title{
@@ -292,36 +281,37 @@ main {
   color: rgb(255, 255, 255);
   text-align: center;
   text-decoration: none;
-  margin-top: px;
-  border-radius: 10px; /* 角丸にする */
+  border-radius: 10px;
   font-size: 16px;
   font-weight: bold;
   transition: background-color 0.3s;
-  margin: 0 auto; /* 親要素に対する中央揃え */
+  margin: 0 auto;
 }
 
 .button1:hover {
-  background-color: #ffba18; /* ホバー時の色変更 */
+  background-color: #ffba18;
 }
+
 .button1 a {
-  text-decoration: none; /* 下線をなくす */
-  color: #ffffff; /* 文字を白に */
+  text-decoration: none;
+  color: #ffffff;
 }
 
-
-.column-3{
+.column-3 {
   width: 48%;
 }
 
-.column-4{
+.column-4 {
   width: 48%;
 }
-.column-5{
+
+.column-5 {
   width: 100%;
   display: flex;
-  flex-direction: column; /* yokoに並べる */
-  justify-content: flex-start; /* 上揃え */
+  flex-direction: column;
+  justify-content: flex-start;
 }
+
 .text{
   line-height: 2;
 }
@@ -329,55 +319,55 @@ main {
 .form-container {
   display: flex;
   flex-direction: column;
-  align-items: center; /* フォームを中央に配置 */
-  margin-top: 20px; /* フォームの上に余白を追加 */
+  align-items: center;
+  margin-top: 20px;
 }
 
 .form {
   background-color: #fff;
-  width: 100%; /* 幅を100%に設定 */
-  max-width: 640px; /* 最大幅を640pxに制限 */
-  height: 600px; /* 高さを自動調整 */
-  border: none; /* フレームの境界線を削除 */
-  margin: 20px 0; /* 上下に余白を追加 */
+  width: 100%;
+  max-width: 640px;
+  height: 600px;
+  border: none;
+  margin: 20px 0;
 }
+
 .kyousitu-img {
-  width: 50%; /* 親要素の幅を50%に設定 */
-  margin-left: auto; /* 右寄せにする */
+  width: 50%;
+  margin-left: auto;
   display: flex;
-  justify-content: flex-end; /* コンテンツを右端に配置 */
+  justify-content: flex-end;
 }
 
 .kyousitu-img img {
-  width: 100%; /* 画像の幅を親要素にフィットさせる */
-  height: auto; /* 高さは自動で調整 */
-  object-fit: cover; /* アスペクト比を保持しつつ全体表示 */
-  border-radius: 30px; /* 必要に応じて角丸 */
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 30px;
 }
 
-
 .demae-img {
-  width: 48%; /* 幅を100%に設定 */
-  height: 100%; /* 高さは自動で調整 */
+  width: 48%;
+  height: 100%;
   display: flex;
-  justify-content: center; /* 中央に揃える */
-  align-items: center; /* 中央に揃える */
+  justify-content: center;
+  align-items: center;
 }
 
 .demae-img img {
-  width: 100%; /* 幅を100%に設定 */
-  height: 100%; /* 高さは自動で調整 */
-  object-fit: cover; /* アスペクト比を保持しつつ全体表示 */
-  border-radius: 30px; /* 角を丸める */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30px;
 }
 
-/* 教室案内 */
-.column-course{
+.column-course {
   width: 100%;
 }
-.mini-title{
+
+.mini-title {
   color: #348fde;
-  margin:0px;
+  margin: 0;
   font-size: 20px;
   display: flex;
   align-items: center;
@@ -385,198 +375,44 @@ main {
 }
 
 .ryokin-img {
-  width: 80%; /* 幅を100%に設定 */
-  height: 100%; /* 高さは自動で調整 */
+  width: 80%;
+  height: 100%;
   display: flex;
-  justify-content: center; /* 中央に揃える */
-  align-items: center; /* 中央に揃える */
+  justify-content: center;
+  align-items: center;
 }
 
 .ryokin-img img {
-  width: 80%; /* 幅を100%に設定 */
-  height: 100%; /* 高さは自動で調整 */
-  object-fit: cover; /* アスペクト比を保持しつつ全体表示 */
-  border-radius: 30px; /* 角を丸める */
-}
-.container-style3 {
-  width: 75%;
-  max-width: 1120px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start; /* 変更: 上揃えに */
-}
-.column-demae {
-  display: flex;
-  flex-direction: column; /* 縦に並べる */
-  align-items: center; /* 中央揃え */
+  width: 80%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30px;
 }
 
-/* フォーム全体のコンテナ幅を調整 */
-.container-style3 {
-    max-width: 1200px; /* ページ全体に合わせた適切な幅 */
-    margin: 0 auto; /* 中央揃え */
-    padding: 20px; /* 余白 */
-}
-
-/* フォームの幅を100%にする */
-.form-container {
-    width: 100%;
-    display: block;
-}
-
-iframe.form {
-    width: 100%; /* フォームを親要素にフィットさせる */
-    height: 500px; /* 高さを指定 */
-    border: none; /* ボーダーを消す */
-    margin: 0 auto; /* 中央揃え */
-}
-#programming-class .flex {
-    display: flex; /* 並べて表示 */
-    flex-wrap: wrap; /* 必要なら折り返し */
-    justify-content: space-between; /* 要素間のスペースを均等に */
-    align-items: center; /* 縦位置揃え */
-}
-
-#programming-class .column-3 {
-    flex: 1; /* 同じ幅で揃える */
-    margin: 10px; /* 各要素間の余白 */
-}
-
-#programming-class .button1 {
-    text-align: center; /* ボタンを中央揃え */
-    margin-top: 20px; /* セクション内で少し余白を追加 */
-}
-
-.kyousitu-img img {
-    width: 100%; /* 親要素に合わせる */
-    height: auto; /* アスペクト比を維持 */
-}
-
-/* スマホ時のみ中央揃えを適用 */
 @media (max-width: 768px) {
-  /* .containerの中央揃え */
-  .container, .container-style2, .container-style3 {
-    width: 90%; /* 幅を調整 */
-    max-width: 1000px; /* 最大幅を設定 */
-    margin: 0 auto; /* 中央揃え */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  .container-style2 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .kyousitu-img {
+    display: none;
   }
 
-  /* フォーム全体 */
-  .form-container {
+  .column-4 {
     width: 100%;
-    display: block;
-    align-items: center;
-    margin: 20px 0;
-  }
-
-  /* 画像コンテナ（中央揃え） */
-  .concept-img, .kyousitu-img, .demae-img, .ryokin-img {
-    width: 90%; /* 幅を調整 */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  /* 画像が中央揃え */
-  .concept-img img, .kyousitu-img img, .demae-img img, .ryokin-img img {
-    width: 100%; /* 親要素に合わせる */
-    height: auto; /* 高さは自動で調整 */
-    object-fit: cover; /* アスペクト比を保持しつつ全体表示 */
-    border-radius: 30px; /* 角丸にする */
-  }
-
-  /* フレックスコンテナの中央揃え */
-  .flex, .flex2 {
-    display: flex;
-    justify-content: center; /* 中央揃え */
-    flex-wrap: wrap;
-    align-items: center; /* 縦位置中央揃え */
-  }
-
-  /* フォームコンテナの幅調整 */
-  .form {
-    max-width: 90%;
-    margin: 0 auto; /* 中央揃え */
-  }
-
-  /* メニューが中央に表示されるように */
-  .header_menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* 中央揃え */
-    text-align: center;
-  }
-
-  /* ボタンの中央揃え */
-  .button1 {
-    display: inline-block;
-    margin: 20px auto;
-    text-align: center;
   }
 }
 
-/* スマホ時のみ中央揃えを適用 */
 @media (max-width: 768px) {
-  /* .containerの中央揃え */
-  .container, .container-style2, .container-style3 {
-    width: 90%; /* 幅を調整 */
-    max-width: 1000px; /* 最大幅を設定 */
-    margin: 0 auto; /* 中央揃え */
+  .column-2 {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
   }
 
-  /* 画像コンテナ（中央揃え） */
-  .concept-img, .kyousitu-img, .demae-img, .ryokin-img {
-    width: 90%; /* 幅を調整 */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; /* 画像と文章、ボタンが縦に並ぶ */
-  }
-
-  /* 画像が中央揃え */
-  .concept-img img, .kyousitu-img img, .demae-img img, .ryokin-img img {
-    width: 100%; /* 親要素に合わせる */
-    height: auto; /* 高さは自動で調整 */
-    object-fit: cover; /* アスペクト比を保持しつつ全体表示 */
-    border-radius: 30px; /* 角丸にする */
-  }
-
-  /* フレックスコンテナの中央揃え */
-  .flex, .flex2 {
-    display: flex;
-    justify-content: center; /* 中央揃え */
-    flex-wrap: wrap;
-    align-items: center; /* 縦位置中央揃え */
-  }
-
-  /* フォームコンテナの幅調整 */
-  .form {
-    max-width: 90%;
-    margin: 0 auto; /* 中央揃え */
-  }
-
-  /* メニューが中央に表示されるように */
-  .header_menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* 中央揃え */
-    text-align: center;
-  }
-
-  /* ボタンの中央揃え */
-  .button1 {
-    display: inline-block;
-    margin: 20px auto;
-    text-align: center;
+  .demae-img {
+    display: none;
   }
 }
