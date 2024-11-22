@@ -1,5 +1,574 @@
 /* main.css */
-/* カスケーディング下に書いた項目の方が優先される */
+/* カスケーディング下に書いた項目の方が優先される*/
+.pop {font-family: "Poppins", sans-serif;}
+.Noto{font-family: "Noto Sans JP", sans-serif;}
+
+.container {
+	width: 75%;
+  max-width: 1120px;/* 最大サイズ */
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.container-style2, .container-style3 {
+  width: 75%;
+  max-width: 1120px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-style4 {
+  width: 48%;
+  max-width: 1120px;
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* 変更: 上揃えに */
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between; 
+  flex-wrap: wrap; /* レスポンシブ対応で折り返し可能に */
+  align-items: flex-start; /* 上端に揃える */
+}
+
+.flex2{
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+}
+
+body{
+  background-image: url(b004.gif);
+  background-size: cover; /* 背景画像を全体に表示 */
+  background-position: top; /* 背景画像を中央に配置 */
+}
+
+header {
+  display: flex;
+  align-items: center;
+  position: fixed; /* スクロールしても上部に固定 */
+  top: 0; /* 上端に配置 */
+  left: 0;
+  width: 100%; /* 横幅を全体に広げる */
+  background-color: #eceeee; /* 背景色 */
+  z-index: 100; /* 他の要素の上に表示されるようにする重なり順なので数字を大きくしている */
+  border-bottom: 0px solid #000000; /* 下線を追加 */
+  height: 50px; /* ヘッダーの高さを指定 */
+  box-shadow: 0 12px 12px rgba(0, 0, 0, 0.3); /* 影を追加 */
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000000;
+  letter-spacing: -0.04em;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-decoration: none;
+}
+
+/* 通常のメニュー表示 */
+.header_menu {
+	display: flex;
+	flex-direction: row;
+	list-style: none;
+}
+
+.menu-icon {
+	display: none;
+	flex-direction: column;
+	cursor: pointer;
+	width: 25px;
+	height: 25px;
+	justify-content: space-between;
+	margin-left: auto; /* 右端に配置 */
+}
+.menu-icon span {
+	display: block;
+	width: 100%;
+	height: 4px;
+	background-color: #333;
+	border-radius: 2px;
+}
+
+.menu-toggle {
+	display: none;
+}
+
+@media (max-width: 768px) {
+	.header_menu {
+		display: none;
+		flex-direction: column;
+		width: 100%;
+		background-color: #fff;
+		text-align: center;
+		position: absolute;
+		top: 50px;
+		right: 0;
+		z-index: 100;
+	}
+
+	.menu-icon {
+		display: flex;
+	}
+
+	.menu-toggle:checked ~ nav .header_menu {
+		display: flex;
+	}
+
+	.header_menu li {
+		padding: 10px 0;
+	}
+
+	.header_menu a {
+		color: #000;
+		text-decoration: none;
+		font-size: 18px;
+	}
+}
+
+@media (min-width: 769px) {
+	.menu-icon {
+		display: none; /* ハンバーガーメニュー非表示 */
+	}
+}
+
+.header_menu li {
+  margin-right: 20px;
+}
+
+.header_menu a {
+  color: #000000; 
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.header_menu a:hover {
+  color: #3b9df3;
+  font-weight: 400;
+  transition:.3s;
+}
+
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 40px 0;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-text {
+  font-size: 14px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.social-icon img {
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+  transition: transform 0.3s;
+}
+
+.social-icon img:hover {
+  transform: scale(1.1);
+}
+
+.social-icon {
+  color: white;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  opacity: 0.8;
+}
+
+main {
+  margin-top: 55px;
+}
+
+#hero {
+  position: relative;
+  background-image: url(01.webp);
+  background-size: cover;
+  background-position: center;
+  height: 540px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 90px;
+}
+
+#hero::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.hero_inner {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.hero_inner h1 {
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.hero_inner p {
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.column-2 {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.concept-img {
+  width: 48%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.concept-img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+.title{
+  font-size: 36px;
+  font-weight: 700;
+  color: #348fde;
+  margin-bottom: 10px;
+}
+
+.button1 {
+  display: inline-block;
+  padding: 10px 10px;
+  background-color: #de5917;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  margin: 0 auto;
+}
+
+.button1:hover {
+  background-color: #ffba18;
+}
+
+.button1 a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.column-3 {
+  width: 48%;
+}
+
+.column-4 {
+  width: 48%;
+}
+
+.column-5 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.text{
+  line-height: 2;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.form {
+  background-color: #fff;
+  width: 100%;
+  max-width: 640px;
+  height: 600px;
+  border: none;
+  margin: 20px 0;
+}
+
+.kyousitu-img {
+  width: 50%;
+  margin-left: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.kyousitu-img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+.demae-img {
+  width: 48%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.demae-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+.column-course {
+  width: 100%;
+}
+
+.mini-title {
+  color: #348fde;
+  margin: 0;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ryokin-img {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ryokin-img img {
+  width: 80%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+@media (max-width: 768px) {
+  .container-style2 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .kyousitu-img {
+    display: none;
+  }
+
+  .column-4 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .column-2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .demae-img {
+    display: none;
+  }
+}
+
+/* スマホ表示時 (max-width: 768px) */
+@media (max-width: 768px) {
+  /* すべてのコンテンツを中央揃えに */
+  body, .container, .container-style2, .container-style4, .flex {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* flexの横並び要素を縦並びに変更 */
+  .flex {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* column-2, column-3, column-4の要素を縦に並べる */
+  .column-2, .column-3, .column-4 {
+    width: 100%; /* 横並びを縦並びにするために100%幅に変更 */
+    margin-bottom: 20px; /* 各要素に少しの間隔を追加 */
+  }
+
+  /* 画像上に表示し、テキストを下に配置 */
+  .column-2, .column-3, .column-4 {
+    flex-direction: column; /* 縦並びにする */
+    justify-content: flex-start; /* 上に寄せる */
+  }
+
+  /* 画像のサイズ調整 */
+  .concept-img img, .kyousitu-img img, .demae-img img {
+    width: 100%; /* 画像がコンテナにフィットするように調整 */
+    height: auto; /* 高さは自動調整 */
+    object-fit: cover;
+    border-radius: 30px;
+  }
+}
+
+/* PC表示時の調整はそのままにしておく */
+@media (min-width: 769px) {
+  .flex {
+    justify-content: space-between; /* 横並びはそのまま */
+    flex-wrap: wrap; /* 必要に応じて折り返し */
+  }
+}
+
+/* スマホ表示時 (max-width: 768px) */
+@media (max-width: 768px) {
+  /* すべてのコンテンツを中央揃えに */
+  body, .container, .container-style2, .container-style4, .flex {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* flexの横並び要素を縦並びに変更 */
+  .flex {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* column-2, column-3, column-4の要素を縦に並べる */
+  .column-2, .column-3, .column-4 {
+    width: 100%; /* 横並びを縦並びにするために100%幅に変更 */
+    margin-bottom: 20px; /* 各要素に少しの間隔を追加 */
+  }
+
+  /* 画像上に表示し、テキストを下に配置 */
+  .column-2, .column-3, .column-4 {
+    flex-direction: column; /* 縦並びにする */
+    justify-content: flex-start; /* 上に寄せる */
+  }
+
+  /* 画像のサイズ調整 */
+  .concept-img img, .kyousitu-img img, .demae-img img {
+    width: 100%; /* 画像がコンテナにフィットするように調整 */
+    height: auto; /* 高さは自動調整 */
+    object-fit: cover;
+    border-radius: 30px;
+  }
+
+  /* 非表示設定を削除 */
+  .kyousitu-img, .demae-img {
+    display: flex; /* 画像を表示 */
+  }
+}
+
+@media (max-width: 768px) {
+  /* すべてのコンテンツを中央揃えに */
+  body, .container, .container-style2, .container-style4, .flex {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* flexの横並び要素を縦並びに変更 */
+  .flex {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* column-2, column-3, column-4の要素を縦に並べる */
+  .column-2, .column-3, .column-4 {
+    width: 100%; /* 横並びを縦並びにするために100%幅に変更 */
+    margin-bottom: 20px; /* 各要素に少しの間隔を追加 */
+  }
+
+  /* 画像上に表示し、テキストを下に配置 */
+  .column-2, .column-3, .column-4 {
+    flex-direction: column; /* 縦並びにする */
+    justify-content: flex-start; /* 上に寄せる */
+  }
+
+  /* 画像のサイズ調整 */
+  .concept-img img, .kyousitu-img img, .demae-img img {
+    width: 100%; /* 画像がコンテナにフィットするように調整 */
+    height: auto; /* 高さは自動調整 */
+    object-fit: cover;
+    border-radius: 30px;
+  }
+
+  /* .kyousitu-img と .demae-img を表示 */
+  .kyousitu-img, .demae-img {
+    display: flex; /* 画像を表示 */
+  }
+}
+
+/* 画像をレスポンシブに表示するスタイル */
+.responsive-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* 親コンテナの調整 */
+.column-5 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* テキストと画像間のスペースを調整 */
+.ryokin-img {
+  margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+    .ryokin-img img {
+        display: block; /* ブロック要素化で中央揃え可能 */
+        margin: 0 auto; /* 左右中央揃え */
+    }
+}
+
+/* 修正版 CSS */
 .pop {font-family: "Poppins", sans-serif;}
 .Noto {font-family: "Noto Sans JP", sans-serif;}
 
@@ -27,86 +596,6 @@ header {
   z-index: 100;
   height: 50px;
   box-shadow: 0 12px 12px rgba(0, 0, 0, 0.3);
-}
-
-.logo {
-  font-size: 18px;
-  font-weight: 700;
-  color: #000000;
-  text-decoration: none;
-  margin: 0;
-}
-
-.header_menu {
-  display: flex;
-  list-style: none;
-}
-
-.header_menu li {
-  margin-right: 20px;
-}
-
-.header_menu a {
-  color: #000000;
-  text-decoration: none;
-  font-weight: 400;
-}
-
-.header_menu a:hover {
-  color: #3b9df3;
-  transition: .3s;
-}
-
-.menu-icon {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  width: 25px;
-  height: 25px;
-  justify-content: space-between;
-  margin-left: auto;
-}
-
-.menu-icon span {
-  display: block;
-  width: 100%;
-  height: 4px;
-  background-color: #333;
-  border-radius: 2px;
-}
-
-.menu-toggle {
-  display: none;
-}
-
-@media (max-width: 768px) {
-  .header_menu {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: #fff;
-    text-align: center;
-    position: absolute;
-    top: 50px;
-    right: 0;
-    z-index: 100;
-  }
-
-  .menu-icon {
-    display: flex;
-  }
-
-  .menu-toggle:checked ~ nav .header_menu {
-    display: flex;
-  }
-
-  .header_menu li {
-    padding: 10px 0;
-  }
-
-  .header_menu a {
-    font-size: 18px;
-  }
 }
 
 main {
@@ -146,41 +635,7 @@ main {
   align-items: center;
 }
 
-.hero_inner h1 {
-  font-size: 38px;
-  font-weight: 700;
-  margin-bottom: 0;
-}
-
-.hero_inner p {
-  font-size: 14px;
-  font-weight: 500;
-  margin: 10px 0 0;
-}
-
-.flex {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: flex-start;
-}
-
-.column-2,
-.column-3,
-.column-4,
-.column-5 {
-  width: 48%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.column-5 {
-  width: 100%;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
+/* 画像を文章と同じ幅に */
 .concept-img img,
 .kyousitu-img img,
 .demae-img img,
@@ -193,94 +648,23 @@ main {
   margin: 0 auto;
 }
 
-.form-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
-}
-
-.form {
-  background-color: #fff;
-  width: 100%;
-  max-width: 640px;
-  height: 600px;
-  margin: 20px 0;
-}
-
-.button1 {
-  display: inline-block;
-  padding: 10px 10px;
-  background-color: #de5917;
-  color: #ffffff;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 10px;
-  font-size: 16px;
-  font-weight: bold;
-  transition: background-color 0.3s;
-  margin: 0 auto;
-}
-
-.button1:hover {
-  background-color: #ffba18;
-}
-
-.footer {
-  width: 100%;
-  text-align: center;
-  padding: 40px 0;
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.footer-text {
-  font-size: 14px;
-  font-weight: 700;
-  color: #000000;
-  margin-bottom: 10px;
-}
-
-.social-icon img {
-  width: 40px;
-  height: 40px;
-  margin: 0 10px;
-  transition: transform 0.3s;
-}
-
-.social-icon img:hover {
-  transform: scale(1.1);
-}
-
+/* スマホ対応 */
 @media (max-width: 768px) {
   .container {
     padding-left: 20px;
     padding-right: 20px;
   }
 
-  .flex {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .column-2,
-  .column-3,
-  .column-4 {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .kyousitu-img,
-  .demae-img {
-    display: none;
-  }
-
   .concept-img img,
+  .kyousitu-img img,
+  .demae-img img,
   .ryokin-img img {
     width: 100%;
+  }
+
+  .column-2, .column-3, .column-4 {
+    width: 100%;
+    margin-bottom: 20px;
   }
 }
 
