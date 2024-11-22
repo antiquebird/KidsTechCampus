@@ -416,3 +416,47 @@ main {
     display: none;
   }
 }
+
+/* スマホ表示時 (max-width: 768px) */
+@media (max-width: 768px) {
+  /* すべてのコンテンツを中央揃えに */
+  body, .container, .container-style2, .container-style4, .flex {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* flexの横並び要素を縦並びに変更 */
+  .flex {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* column-2, column-3, column-4の要素を縦に並べる */
+  .column-2, .column-3, .column-4 {
+    width: 100%; /* 横並びを縦並びにするために100%幅に変更 */
+    margin-bottom: 20px; /* 各要素に少しの間隔を追加 */
+  }
+
+  /* 画像上に表示し、テキストを下に配置 */
+  .column-2, .column-3, .column-4 {
+    flex-direction: column; /* 縦並びにする */
+    justify-content: flex-start; /* 上に寄せる */
+  }
+
+  /* 画像のサイズ調整 */
+  .concept-img img, .kyousitu-img img, .demae-img img {
+    width: 100%; /* 画像がコンテナにフィットするように調整 */
+    height: auto; /* 高さは自動調整 */
+    object-fit: cover;
+    border-radius: 30px;
+  }
+}
+
+/* PC表示時の調整はそのままにしておく */
+@media (min-width: 769px) {
+  .flex {
+    justify-content: space-between; /* 横並びはそのまま */
+    flex-wrap: wrap; /* 必要に応じて折り返し */
+  }
+}
