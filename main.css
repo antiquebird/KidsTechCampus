@@ -561,127 +561,18 @@ main {
   margin-bottom: 15px;
 }
 
-@media (max-width: 768px) {
-    .ryokin-img img {
-        display: block; /* ブロック要素化で中央揃え可能 */
-        margin: 0 auto; /* 左右中央揃え */
-    }
-}
-
-/* 修正版 CSS */
-.pop {font-family: "Poppins", sans-serif;}
-.Noto {font-family: "Noto Sans JP", sans-serif;}
-
-.container {
-  width: 75%;
-  max-width: 1120px;
-  margin: 0 auto;
-  overflow: hidden;
-}
-
-body {
-  background-image: url(b004.gif);
-  background-size: cover;
-  background-position: top;
-}
-
-header {
-  display: flex;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #eceeee;
-  z-index: 100;
-  height: 50px;
-  box-shadow: 0 12px 12px rgba(0, 0, 0, 0.3);
-}
-
-main {
-  margin-top: 55px;
-}
-
-#hero {
-  position: relative;
-  background-image: url(01.webp);
-  background-size: cover;
-  background-position: center;
-  height: 540px;
-  border-radius: 30px;
-  display: flex;
-  align-items: center;
-  margin-bottom: 90px;
-}
-
-#hero::before {
-  content: '';
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-
-.hero_inner {
-  position: relative;
-  z-index: 2;
-  color: #ffffff;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* 画像を文章と同じ幅に */
-.concept-img img,
-.kyousitu-img img,
-.demae-img img,
-.ryokin-img img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 30px;
-  display: block;
-  margin: 0 auto;
-}
-
-/* スマホ対応 */
-@media (max-width: 768px) {
-  .container {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .concept-img img,
-  .kyousitu-img img,
-  .demae-img img,
-  .ryokin-img img {
-    width: 100%;
-  }
-
-  .column-2, .column-3, .column-4 {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-}
 
 .ryo-setumei {
-  list-style-type: disc;
-  list-style-position: inside; /* 左揃えを確実にする */
-  padding-left: 0; /* デフォルトのインデントを削除 */
-  margin: 0; /* 点と文章の間の余白を取り除く */
-  text-align: left; /* 箇条書き全体を左揃えにする */
+  list-style-position: inside; /* 点とテキストを左揃えに */
+  margin: 0; /* 点と文章の間の余白を削除 */
+  padding: 0;
 }
 
 .ryo-setumei li {
-  margin: 0; /* 個々の箇条書きアイテムの余白を削除 */
+  margin: 0; /* 不要な余白を削除 */
 }
 
-.column-5 img {
+.ryokin-img img {
   display: block;
-  margin: 0 auto; /* 画像を中央揃えにする */
+  margin: 0 auto; /* 画像を中央揃え */
 }
-
