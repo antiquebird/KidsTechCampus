@@ -453,3 +453,70 @@ iframe.form {
     width: 100%; /* 親要素に合わせる */
     height: auto; /* アスペクト比を維持 */
 }
+
+/* スマホ時のみ中央揃えを適用 */
+@media (max-width: 768px) {
+  /* .containerの中央揃え */
+  .container, .container-style2, .container-style3 {
+    width: 90%; /* 幅を調整 */
+    max-width: 1000px; /* 最大幅を設定 */
+    margin: 0 auto; /* 中央揃え */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* フォーム全体 */
+  .form-container {
+    width: 100%;
+    display: block;
+    align-items: center;
+    margin: 20px 0;
+  }
+
+  /* 画像コンテナ（中央揃え） */
+  .concept-img, .kyousitu-img, .demae-img, .ryokin-img {
+    width: 90%; /* 幅を調整 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* 画像が中央揃え */
+  .concept-img img, .kyousitu-img img, .demae-img img, .ryokin-img img {
+    width: 100%; /* 親要素に合わせる */
+    height: auto; /* 高さは自動で調整 */
+    object-fit: cover; /* アスペクト比を保持しつつ全体表示 */
+    border-radius: 30px; /* 角丸にする */
+  }
+
+  /* フレックスコンテナの中央揃え */
+  .flex, .flex2 {
+    display: flex;
+    justify-content: center; /* 中央揃え */
+    flex-wrap: wrap;
+    align-items: center; /* 縦位置中央揃え */
+  }
+
+  /* フォームコンテナの幅調整 */
+  .form {
+    max-width: 90%;
+    margin: 0 auto; /* 中央揃え */
+  }
+
+  /* メニューが中央に表示されるように */
+  .header_menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 中央揃え */
+    text-align: center;
+  }
+
+  /* ボタンの中央揃え */
+  .button1 {
+    display: inline-block;
+    margin: 20px auto;
+    text-align: center;
+  }
+}
