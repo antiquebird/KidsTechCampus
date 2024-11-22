@@ -284,3 +284,20 @@ main {
   }
 }
 
+.ryo-setumei {
+  list-style-type: disc;
+  list-style-position: inside; /* 左揃えを確実にする */
+  padding-left: 0; /* デフォルトのインデントを削除 */
+  margin: 0; /* 点と文章の間の余白を取り除く */
+  text-align: left; /* 箇条書き全体を左揃えにする */
+}
+
+.ryo-setumei li {
+  margin: 0; /* 個々の箇条書きアイテムの余白を削除 */
+}
+
+.column-5 img {
+  display: block;
+  margin: 0 auto; /* 画像を中央揃えにする */
+}
+
