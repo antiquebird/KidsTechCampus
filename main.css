@@ -432,5 +432,25 @@ iframe.form {
     border: none; /* ボーダーを消す */
     margin: 0 auto; /* 中央揃え */
 }
+#programming-class .flex {
+    display: flex; /* 並べて表示 */
+    flex-wrap: wrap; /* 必要なら折り返し */
+    justify-content: space-between; /* 要素間のスペースを均等に */
+    align-items: center; /* 縦位置揃え */
+}
 
+#programming-class .column-3 {
+    flex: 1; /* 同じ幅で揃える */
+    margin: 10px; /* 各要素間の余白 */
+}
+
+#programming-class .button1 {
+    text-align: center; /* ボタンを中央揃え */
+    margin-top: 20px; /* セクション内で少し余白を追加 */
+}
+
+.kyousitu-img img {
+    width: 100%; /* 親要素に合わせる */
+    height: auto; /* アスペクト比を維持 */
+}
 
