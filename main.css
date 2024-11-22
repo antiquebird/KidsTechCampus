@@ -413,4 +413,24 @@ main {
   align-items: center; /* 中央揃え */
 }
 
+/* フォーム全体のコンテナ幅を調整 */
+.container-style3 {
+    max-width: 1200px; /* ページ全体に合わせた適切な幅 */
+    margin: 0 auto; /* 中央揃え */
+    padding: 20px; /* 余白 */
+}
+
+/* フォームの幅を100%にする */
+.form-container {
+    width: 100%;
+    display: block;
+}
+
+iframe.form {
+    width: 100%; /* フォームを親要素にフィットさせる */
+    height: 500px; /* 高さを指定 */
+    border: none; /* ボーダーを消す */
+    margin: 0 auto; /* 中央揃え */
+}
+
 
